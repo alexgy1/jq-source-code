@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #app{
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">hello jquery 2.0.3</div>
+    <script src="jquery-2.0.3.js"></script>
+    <script>
+        let app =  $('#app')
+        console.log(app)
+        app .on('click', ()=>{
+            alert(1)
+        })
+
+
+        //Deferred promise的封装
+        // var dfd = $.Deferred()
+        // setTimeout(()=>{
+        //     alert(1)
+        //     dfd.resolve()
+        // }, 1000)
+        // dfd.done(()=>{
+        //     alert(2)
+        // })
+
+        //data 数据缓存
+        app.data('name', 'test')
+        console.log(app.data('name'))
+
+
+        //animate
+
+        app.animate({
+            width : '100px',
+            backgroundColor : 'green',
+            height: '200px'
+        })
+    </script>
+</body>
+</html>
